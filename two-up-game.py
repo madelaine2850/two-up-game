@@ -8,7 +8,7 @@ class Game(EasyFrame):
     def __init__(self):
         EasyFrame.__init__(self, title="Two Up Game")
 
-        self.askBet = self.addLabel(text="Please place your bet (HH, HT, or TT):\n",
+        self.askBet = self.addLabel(text="Game.ask_user()",
                                     row=0, column=0)
 
         self.answerField = self.addTextField(text="",
@@ -19,6 +19,10 @@ class Game(EasyFrame):
 
         self.result = self.addTextField(text="",
                                         row=3, column=0)
+        
+    @staticmethod
+    def ask_user():
+        return "Please place your bet (HH, HT, or TT):\n"
 
     @staticmethod
     def flip_coin():
